@@ -100,7 +100,7 @@ export default function Landing() {
           </CopyToClipboard>
         </div>
       </div>
-   <div className="flex flex-col px-4 py-4 sm:px-6 lg:px-12 border-b border-gray-200">
+   <div className="flex flex-col px-4 py-4 sm:px-6 lg:px-12">
   <div className="flex items-center w-full gap-4 mt-5">
     <h1 className="font-mono font-bold whitespace-nowrap">SHOWCASE_MANIFEST</h1>
     <span className="flex-1 border-b border-gray-200"></span>
@@ -117,7 +117,7 @@ export default function Landing() {
          {item.render()}
       </div>
 
-      <div className="flex overflow-auto border border-gray-200 p-4 w-full h-[126px]">
+      <div className="flex overflow-auto border border-gray-200 p-4 w-full h-[126px] mb-10">
         <Highlight code={item.code} language="jsx" theme={themes.vsLight}>
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre className={`${className} font-mono text-xs whitespace-pre-wrap`} style={style}>
@@ -136,6 +136,7 @@ export default function Landing() {
   ))}
 </div>
 </div>
+<hr className="border border-gray-100 mt-20"></hr>
     </>
   );
 }

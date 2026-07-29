@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 
 export default function Navbar () {
@@ -16,9 +16,7 @@ export default function Navbar () {
                 <a>
                    <small className="font-mono cursor-pointer">components</small> 
                 </a>
-                <a>
-                   <small className="font-mono cursor-pointer">docs</small> 
-                </a>
+               <Link to="/docs"><small className="font-mono cursor-pointer">docs</small></Link>
                 <a
                 href="https://github.com/omkarwarik02/stark"
                 >
