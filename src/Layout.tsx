@@ -4,7 +4,9 @@ import Footer from "./components/footer";
 
 export default function Layout() {
   const location = useLocation();
-  const hideFooter = location.pathname.startsWith("/docs");
+  const hideFooter =
+    location.pathname.startsWith("/docs") ||
+    location.pathname.startsWith("/contribution");
 
   return (
     <div>

@@ -1,33 +1,21 @@
+import Sidebar from "../components/sidebar";
+
+
+const docsLinks = [
+  { label: "Home", to: "/" },
+  { label: "Getting Started", to: "/docs" },
+  {label:"Contribution", to:"/contribution"}
+];
+
+
+
 export default function Docs() {
   return (
     <>
       <div className="flex flex-col min-h-screen px-4 py-4 sm:px-6 lg:px-12 ">
-        <div className="w-[256px] top-[90px] h-[704px] border border-gray-200 left-0 fixed p-4 flex flex-col gap-y-3 bg-white">
-          <p className="font-mono text-sm cursor-pointer hover:text-blue-600">
-            Getting Started
-          </p>
-          <p className="font-mono text-sm cursor-pointer hover:text-blue-600">
-            Installation
-          </p>
-          <p className="font-mono text-sm cursor-pointer hover:text-blue-600">
-            Button
-          </p>
-          <p className="font-mono text-sm cursor-pointer hover:text-blue-600">
-            Navbar
-          </p>
-          <p className="font-mono text-sm cursor-pointer hover:text-blue-600">
-            Dropdown Menu
-          </p>
-          <p className="font-mono text-sm cursor-pointer hover:text-blue-600">
-            FAQ Accordion
-          </p>
-          <p className="font-mono text-sm cursor-pointer hover:text-blue-600">
-            Like Button
-          </p>
-          <p className="font-mono text-sm cursor-pointer hover:text-blue-600">
-            Password Strength
-          </p>
-        </div>
+       
+         <Sidebar links={docsLinks} />
+          
         <div className="pl-[256px] pt-[90px]">
           <section id="introduction" className="mb-10">
             <h2 className="font-extrabold text-[48px] mb-2 mt-10">
@@ -43,9 +31,7 @@ export default function Docs() {
             </p>
           </section>
           <section id="prerequisites" className="mb-10">
-            <h2 className="text-xl font-semibold mb-2 mt-10 ">
-              Prerequisites
-            </h2>
+            <h2 className="text-xl font-semibold mb-2 mt-10 ">Prerequisites</h2>
             <p className="text-gray-600 mb-4">
               Stark is compatible with React 18 and above. It uses Tailwind CSS
               classes internally, but components ship pre-styled — so you don't
@@ -99,50 +85,81 @@ function App() {
           </section>
 
           <section id="props" className="mb-10">
-  <h2 className="text-xl font-semibold mb-2">Props</h2>
-  <p className="text-gray-600 mb-4">
-    The table below lists the available props for this component, their expected 
-    types, default values, and a short description of what each one controls.
-  </p>
-  <div className="overflow-x-auto">
-    <table className="w-full text-sm text-left border border-gray-200">
-      <thead className="bg-gray-50">
-        <tr>
-          <th className="p-3 border-b border-gray-200 font-mono">Prop</th>
-          <th className="p-3 border-b border-gray-200 font-mono">Type</th>
-          <th className="p-3 border-b border-gray-200 font-mono">Default</th>
-          <th className="p-3 border-b border-gray-200">Description</th>
-        </tr>
-      </thead>
-      <tbody className="text-gray-600">
-        <tr>
-          <td className="p-3 border-b border-gray-200 font-mono">liked</td>
-          <td className="p-3 border-b border-gray-200 font-mono">boolean</td>
-          <td className="p-3 border-b border-gray-200 font-mono">false</td>
-          <td className="p-3 border-b border-gray-200">Controls the initial liked state of the button.</td>
-        </tr>
-        <tr>
-          <td className="p-3 border-b border-gray-200 font-mono">onLikeChange</td>
-          <td className="p-3 border-b border-gray-200 font-mono">{`(liked: boolean) => void`}</td>
-          <td className="p-3 border-b border-gray-200 font-mono">—</td>
-          <td className="p-3 border-b border-gray-200">Callback fired whenever the liked state changes.</td>
-        </tr>
-        <tr>
-          <td className="p-3 border-b border-gray-200 font-mono">size</td>
-          <td className="p-3 border-b border-gray-200 font-mono">{`"sm" | "md" | "lg"`}</td>
-          <td className="p-3 border-b border-gray-200 font-mono">"md"</td>
-          <td className="p-3 border-b border-gray-200">Sets the size of the button.</td>
-        </tr>
-        <tr>
-          <td className="p-3 font-mono">className</td>
-          <td className="p-3 font-mono">string</td>
-          <td className="p-3 font-mono">—</td>
-          <td className="p-3">Adds custom Tailwind classes to override default styling.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+            <h2 className="text-xl font-semibold mb-2">Props</h2>
+            <p className="text-gray-600 mb-4">
+              The table below lists the available props for this component,
+              their expected types, default values, and a short description of
+              what each one controls.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-left border border-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="p-3 border-b border-gray-200 font-mono">
+                      Prop
+                    </th>
+                    <th className="p-3 border-b border-gray-200 font-mono">
+                      Type
+                    </th>
+                    <th className="p-3 border-b border-gray-200 font-mono">
+                      Default
+                    </th>
+                    <th className="p-3 border-b border-gray-200">
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-600">
+                  <tr>
+                    <td className="p-3 border-b border-gray-200 font-mono">
+                      liked
+                    </td>
+                    <td className="p-3 border-b border-gray-200 font-mono">
+                      boolean
+                    </td>
+                    <td className="p-3 border-b border-gray-200 font-mono">
+                      false
+                    </td>
+                    <td className="p-3 border-b border-gray-200">
+                      Controls the initial liked state of the button.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 border-b border-gray-200 font-mono">
+                      onLikeChange
+                    </td>
+                    <td className="p-3 border-b border-gray-200 font-mono">{`(liked: boolean) => void`}</td>
+                    <td className="p-3 border-b border-gray-200 font-mono">
+                      —
+                    </td>
+                    <td className="p-3 border-b border-gray-200">
+                      Callback fired whenever the liked state changes.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 border-b border-gray-200 font-mono">
+                      size
+                    </td>
+                    <td className="p-3 border-b border-gray-200 font-mono">{`"sm" | "md" | "lg"`}</td>
+                    <td className="p-3 border-b border-gray-200 font-mono">
+                      "md"
+                    </td>
+                    <td className="p-3 border-b border-gray-200">
+                      Sets the size of the button.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-mono">className</td>
+                    <td className="p-3 font-mono">string</td>
+                    <td className="p-3 font-mono">—</td>
+                    <td className="p-3">
+                      Adds custom Tailwind classes to override default styling.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
         </div>
       </div>
     </>

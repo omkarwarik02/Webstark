@@ -19,8 +19,10 @@ export default function Navbar () {
                <Link to="/docs"><small className="font-mono cursor-pointer">docs</small></Link>
                 <a
                 href="https://github.com/omkarwarik02/stark"
+                target="_blank"
+                rel="noopener noreferrer"
                 >
-                   <small className="font-mono cursor-pointer">github</small> 
+                   <small className="font-mono cursor-pointer">github</small>
                 </a>
                 <button className=" flex items-center h-[44px] bg-[#0058BC] text-amber-50 px-10 py-5 cursor-pointer">get started</button>
             </div>
