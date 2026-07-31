@@ -13,11 +13,10 @@ const docsLinks = [
 export default function Docs() {
   return (
     <>
-      <div className="flex flex-col min-h-screen px-4 py-4 sm:px-6 lg:px-12 ">
-       
+      <div className="flex min-h-screen pt-[90px]">
          <Sidebar links={docsLinks} />
-          
-        <div className="pl-[256px] pt-[90px]">
+
+        <div className="flex-1 min-w-0 px-4 py-4 sm:px-6 lg:px-12">
           <section id="introduction" className="mb-10">
             <h2 className="font-extrabold text-[48px] mb-2 mt-10">
               Introduction

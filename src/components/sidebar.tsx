@@ -12,7 +12,7 @@ interface SidebarProps {
 
 export default function Sidebar({ links }: SidebarProps) {
   return (
-    <div className="w-[256px]  h-[704px] top-[90px] border border-gray-200 left-0 fixed p-4 flex flex-col gap-y-3 bg-white">
+    <div className="w-[256px] shrink-0 sticky top-[90px] h-[calc(100vh-90px)] border border-gray-200 p-4 flex flex-col gap-y-3 bg-white overflow-y-auto">
       {links.map((link) => (
         <NavLink
           key={link.to}

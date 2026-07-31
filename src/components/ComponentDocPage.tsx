@@ -16,8 +16,9 @@ const compLinks = [
 
 export default function ComponentDocPage({ doc }: { doc:ComponentDoc}) {
     return (
-        <div> <Sidebar links={compLinks} />
-        <div className="px-4 py-10  sm:px-6 lg:px-12 max-w-4xl mx-auto pl-[256px] pt-[90px] mt-10">
+        <div className="flex min-h-screen pt-[90px]">
+        <Sidebar links={compLinks} />
+        <div className="flex-1 min-w-0 px-4 py-10 sm:px-6 lg:px-12 max-w-4xl mx-auto mt-10">
        
             <h1 className="font-extrabold text-3xl">{doc.name}</h1>
             <p className="text-gray-500 mt-2">{doc.description}</p>
