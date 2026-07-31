@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Layout from "./Layout";
 import "./App.css";
 import Landing from "./pages/LandingPage";
@@ -17,6 +18,16 @@ function DocRoute() {
   return <ComponentDocPage  doc={doc} />
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 
 
 
@@ -24,6 +35,7 @@ function DocRoute() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
        <Route element={<Layout />}>
   <Route index element={<Landing />} />

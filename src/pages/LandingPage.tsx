@@ -75,17 +75,17 @@ export default function Landing() {
     
   return (
     <>
-      <div className="flex flex-col h-[406px]  px-4 py-4 sm:px-6 lg:px-12 mt-25 ">
-        <div className="flex flex-col h-[156px]  mt-25">
+      <div className="flex flex-col min-h-[406px]  px-4 py-4 sm:px-6 lg:px-12 mt-25 ">
+        <div className="flex flex-col min-h-[156px] mt-25 gap-3">
           <h1 className="font-extrabold text-[30px]">stark.</h1>
-          <small className="flex mt-3 text-[#6B7280] text-[18px]">
+          <small className="flex text-[#6B7280] text-[18px]">
             Engineering-grade ui primitives. Zero abstractions, pure logic built
             for <br></br>systems demand precision, performance, and
             deterministic <br></br> behaviour.
           </small>
         </div>
-        <div className="flex h-[74px] w-[768px] bg-[#F9FAFB] border border-gray-200 mt-3 justify-between">
-            <code className="font-mono text-sm text-gray-800 px-6 py-6">
+        <div className="flex flex-wrap gap-3 items-center min-h-[74px] w-full max-w-[768px] bg-[#F9FAFB] border border-gray-200 mt-3 justify-between">
+            <code className="font-mono text-sm text-gray-800 px-6 py-6 break-all">
             ${installCommand}
           </code>
           <CopyToClipboard  text={installCommand}
@@ -106,9 +106,9 @@ export default function Landing() {
     <span className="flex-1 border-b border-gray-200"></span>
   </div>
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 px-10 py-10 max-w-[1284px] mx-auto mt-5">
-    
+
   {showcaseItems.map(( item) => (
-    <div key={item.id} className="border border-gray-200 p-4 w-[592px] h-[451px] ">
+    <div key={item.id} className="border border-gray-200 p-4 w-full min-h-[451px]">
       <div className="font-mono text-sm text-gray-500 mb-2">{item.label}</div>
       <div
         className="flex relative overflow-hidden  justify-center items-center border border-dotted border-gray-300 p-4 mb-4 w-full h-[216px] "
