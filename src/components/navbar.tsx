@@ -13,9 +13,7 @@ export default function Navbar () {
                 stark.
             </div>
             <div className="flex items-center gap-x-8">
-                <a>
-                   <small className="font-mono cursor-pointer">components</small> 
-                </a>
+               <Link to="/contribution"><small className="font-mono cursor-pointer">contribution</small></Link>
                <Link to="/docs"><small className="font-mono cursor-pointer">docs</small></Link>
                 <a
                 href="https://github.com/omkarwarik02/stark"
@@ -24,7 +22,7 @@ export default function Navbar () {
                 >
                    <small className="font-mono cursor-pointer">github</small>
                 </a>
-                <button className=" flex items-center h-[44px] bg-[#0058BC] text-amber-50 px-10 py-5 cursor-pointer">get started</button>
+                <Link to="/docs" className="flex items-center h-[44px] bg-[#0058BC] text-amber-50 px-10 py-5 cursor-pointer font-mono">get started</Link>
             </div>
         </nav>
     )

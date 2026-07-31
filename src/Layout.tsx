@@ -6,7 +6,9 @@ export default function Layout() {
   const location = useLocation();
   const hideFooter =
     location.pathname.startsWith("/docs") ||
-    location.pathname.startsWith("/contribution");
+    location.pathname.startsWith("/contribution")||
+    location.pathname.startsWith("/component-list")||
+    location.pathname.startsWith("/components/");
 
   return (
     <div>

@@ -3,7 +3,8 @@ import Sidebar from "../components/sidebar";
 const contributionLinks = [
    { label: "Home", to: "/" },
   { label: "Getting Started", to: "/docs" },
-  {label:"Contribution", to:"/contribution"}
+  {label:"Contribution", to:"/contribution"},
+  {label:"Components", to:"/component-list"}
 ]
 
 
