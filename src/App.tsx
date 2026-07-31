@@ -1,5 +1,4 @@
-import { BrowserRouter, Routes, Route, useParams, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import Layout from "./Layout";
 import "./App.css";
 import Landing from "./pages/LandingPage";
@@ -8,6 +7,7 @@ import Contribution from "./pages/Contribution";
 import ComponentsList from "./pages/ComponentsList";
 import { componentDocs } from "./data/components";
 import ComponentDocPage from "./components/ComponentDocPage";
+import { useSmoothScroll } from "./hooks/useSmoothScroll";
 
 
 function DocRoute() {
@@ -18,24 +18,13 @@ function DocRoute() {
   return <ComponentDocPage  doc={doc} />
 }
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
-
-
-
 
 
 function App() {
+  useSmoothScroll();
+
   return (
     <BrowserRouter>
-      <ScrollToTop />
       <Routes>
        <Route element={<Layout />}>
   <Route index element={<Landing />} />
