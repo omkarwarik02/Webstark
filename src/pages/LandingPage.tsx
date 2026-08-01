@@ -76,6 +76,12 @@ export default function Landing() {
   return (
     <>
       <div className="flex flex-col min-h-[406px]  px-4 py-4 sm:px-6 lg:px-12 mt-25 ">
+        <div className="flex justify-end">
+          <a href="https://www.producthunt.com/products/stark-4?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-stark-8c1c0bd4-eb0d-44ca-b27d-443cdc5cf51f" target="_blank" rel="noopener noreferrer">
+          <img alt="stark. - Minimalist React component library | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1212144&amp;theme=light&amp;t=1785577612324"/>
+          </a>
+        </div>
+        
         <div className="flex flex-col min-h-[156px] mt-25 gap-3">
           <h1 className="font-extrabold text-[30px]">stark.</h1>
           <small className="flex text-[#6B7280] text-[18px]">
@@ -83,6 +89,7 @@ export default function Landing() {
             for <br></br>systems demand precision, performance, and
             deterministic <br></br> behaviour.
           </small>
+          
         </div>
         <div className="flex flex-wrap gap-3 items-center min-h-[74px] w-full max-w-[768px] bg-[#F9FAFB] border border-gray-200 mt-3 justify-between">
             <code className="font-mono text-sm text-gray-800 px-6 py-6 break-all">
