@@ -33,13 +33,13 @@ export default function Docs() {
           <section id="prerequisites" className="mb-10">
             <h2 className="text-xl font-semibold mb-2 mt-10 ">Prerequisites</h2>
             <p className="text-gray-600 mb-4">
-              Stark is compatible with React 18 and above. It uses Tailwind CSS
+              Stark is compatible with React 19 and above. It uses Tailwind CSS
               classes internally, but components ship pre-styled — so you don't
               need Tailwind installed in your own project.
             </p>
             <ul className="list-disc pl-5 text-gray-600">
               <li>Node.js 18+</li>
-              <li>React 18+</li>
+              <li>React 19+</li>
             </ul>
           </section>
 
