@@ -34,27 +34,31 @@ export default function ComponentDocPage({ doc }: { doc:ComponentDoc}) {
             <CodeBlock code={doc.usageCode} />
 
              <h2 className="font-mono font-bold mt-8 mb-2">PROPS</h2>
-             <table className="w-full text-sm border border-gray-200">
-                <thead className="bg-gray-50">
-                    <tr>
-                        <th className="text-left p-2 border-b border-gray-200">Name</th>
-            <th className="text-left p-2 border-b border-gray-200">Type</th>
-            <th className="text-left p-2 border-b border-gray-200">Required</th>
-            <th className="text-left p-2 border-b border-gray-200">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {doc.props.map((p)=>(
-                        <tr key={p.name}>
-                            <td className="p-2 border-b border-gray-200 font-mono">{p.name}</td>
-                             <td className="p-2 border-b border-gray-200 font-mono text-gray-500">{p.type}</td>
-                            <td className="p-2 border-b border-gray-200">{p.required ? "Yes" : "No" }</td>
-                            <td className="p-2 border-b border-gray-200">{p.description}</td>
+             {doc.props.length === 0 ? (
+                <p className="text-sm text-gray-500">This component takes no props.</p>
+             ) : (
+                 <table className="w-full text-sm border border-gray-200">
+                    <thead className="bg-gray-50">
+                        <tr>
+                            <th className="text-left p-2 border-b border-gray-200">Name</th>
+                <th className="text-left p-2 border-b border-gray-200">Type</th>
+                <th className="text-left p-2 border-b border-gray-200">Required</th>
+                <th className="text-left p-2 border-b border-gray-200">Description</th>
                         </tr>
+                    </thead>
+                    <tbody>
+                        {doc.props.map((p)=>(
+                            <tr key={p.name}>
+                                <td className="p-2 border-b border-gray-200 font-mono">{p.name}</td>
+                                 <td className="p-2 border-b border-gray-200 font-mono text-gray-500">{p.type}</td>
+                                <td className="p-2 border-b border-gray-200">{p.required ? "Yes" : "No" }</td>
+                                <td className="p-2 border-b border-gray-200">{p.description}</td>
+                            </tr>
                         
-                    ))}
-                </tbody>
-             </table>
+                        ))}
+                    </tbody>
+                 </table>
+             )}
         </div>
         </div>
     )

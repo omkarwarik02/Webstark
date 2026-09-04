@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { LikeButton, DropdownMenu, DynamicIslandNavbar,FAQAccordion, FileDownloadButton } from "@omkarwarik1204/stark";
+import { LikeButton, DropdownMenu, DynamicIslandNavbar,FAQAccordion, FileDownloadButton, LogoTooltip, EmailCheck, PasswordStrengthCheck } from "@omkarwarik1204/stark";
 
 export interface PropDef {
     name:string;
@@ -135,6 +135,56 @@ export const componentDocs: ComponentDoc[] = [
       <DropdownMenu label="Choose" options={[{ value: "a", label: "Option A" }]} />
     ),
   },
-    
+{
+    slug:"logo-tooltip",
+    name:"LogoTooltip",
+    description:"A logo or icon that reveals a small dark tooltip above it on hover — handy for tech-stack rows and social link bars.",
+    importCode:`import { LogoTooltip } from "@omkarwarik1204/stark";`,
+    usageCode:`<LogoTooltip
+  logo={<img src="/images/logo.png" alt="stark" />}
+  label="stark"
+/>
+
+// Larger, with custom spacing
+<LogoTooltip
+  logo={<img src="/images/logo.png" alt="stark" />}
+  label="stark"
+  size={48}
+  className="mx-4"
+/>`,
+    props:[
+      { name: "logo", type: "React.ReactNode", required: true, description: "The logo to render. An <img> is stretched to fill the box and kept in aspect ratio." },
+      { name: "label", type: "string", required: true, description: "Text shown inside the tooltip on hover." },
+      { name: "size", type: "number", description: "Width and height of the logo box, in pixels. Default: 32." },
+      { name: "className", type: "string", description: 'Extra classes merged onto the wrapper. Default: "".' },
+    ],
+    preview: () => (
+      <div className="pt-8">
+        <LogoTooltip
+          logo={<img src="/images/logo.png" alt="stark" />}
+          label="stark"
+          size={48}
+        />
+      </div>
+    ),
+},
+{
+    slug:"email-check",
+    name:"EmailCheck",
+    description:"A self-contained email field that validates the address as you type and reports whether it is well-formed.",
+    importCode:`import { EmailCheck } from "@omkarwarik1204/stark";`,
+    usageCode:`<EmailCheck />`,
+    props:[],
+    preview: () => <EmailCheck />,
+},
+{
+    slug:"password-strength-check",
+    name:"PasswordStrengthCheck",
+    description:"A password field that rates strength as Weak, Medium, or Strong from length, capitals, digits, and symbols as you type.",
+    importCode:`import { PasswordStrengthCheck } from "@omkarwarik1204/stark";`,
+    usageCode:`<PasswordStrengthCheck />`,
+    props:[],
+    preview: () => <PasswordStrengthCheck />,
+},
 ]
 
